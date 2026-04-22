@@ -532,7 +532,7 @@ body {
 .card:nth-child(4) .image-placeholder { background: url('../images/unagi-maki.jpg') center/cover; }
 .card:nth-child(5) .image-placeholder { background: url('../images/samuraiset.jpg') center/cover; }
 .card:nth-child(6) .image-placeholder { background: url('../images/ebi-crunch.jpg') center/cover; }
-.card:nth-child(7) .image-placeholder { background: url('../images/syasee.jpg') center/cover; }
+.card:nth-child(7) .image-placeholder { background: url('images/syasee.jpg') center/cover; }
 .card:nth-child(8) .image-placeholder { background: url('../images/zapech.jpg') center/cover; }
 
 /* фикс адаптива для мобилок */
