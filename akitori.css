@@ -1,0 +1,552 @@
+html {
+  scroll-behavior: smooth; /* плавная прокрутка для якорей */
+}
+
+/* сброс отступов и дефолтных стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  background-color: #111; 
+}
+
+/* ограничитель ширины чтоб на больших мониках не расползалось */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding: 0 20px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #fff;
+  text-align: center; 
+}
+
+/* плавающая менюшка слева */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(17, 17, 17, 0.95);
+  border: 1px solid #333;
+  border-left: none;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 100;
+  border-radius: 0 15px 15px 0;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.7);
+}
+
+.sidebar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.sidebar-icon {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.sidebar-item:hover {
+  color: #ff4d4d;
+  transform: scale(1.1);
+}
+
+/* шапка */
+.header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 20px 50px 20px 100px; /* отступ слева чтоб лого не слипалось с меню */
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px; 
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #ff4d4d; 
+}
+
+/* первый экран с фоном */
+.welcome {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+              url('https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+
+.welcome_div h4 {
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.welcome_div h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.welcome_div p {
+  margin-bottom: 30px;
+}
+
+.welcome-btns {
+  display: flex;
+  justify-content: center; 
+  gap: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn-red {
+  background-color: #b32d2d;
+  color: #fff;
+    }
+
+.btn-white {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* блок про нас */
+.history-section {
+  background-color: #111;
+  padding: 80px 0;
+}
+
+.history-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.history-text {
+  flex: 1;
+}
+
+.history-text p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.history-text b {
+  color: #ff4d4d; 
+}
+
+.history-image {
+  flex: 1;
+  background-color: #333; 
+  border-radius: 10px;
+  box-shadow: 15px 15px 0px #ff4d4d; 
+  aspect-ratio: 4 / 3; 
+  overflow: hidden;
+}
+
+/* секция про пользу суши */
+.healthy-section {
+  background-color: #1a1a1a;
+  padding: 80px 0;
+}
+
+.healthy-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.healthy-image {
+  flex: 1;
+  background-color: #333; 
+  border-radius: 10px;
+  aspect-ratio: 4 / 3; 
+}
+
+.healthy-text {
+  flex: 1;
+}
+
+.healthy-text p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.healthy-text b {
+  color: #ff4d4d;
+}
+
+/* новинки */
+.novelties-section {
+  background-color: #111;
+  padding: 80px 0;
+}
+
+.novelties-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.novelties-text {
+  flex: 1;
+}
+
+.novelties-text p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.novelties-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.novelty-card {
+  text-align: center;
+}
+
+/* делаю фотки ровными квадратами */
+.novelty-placeholder {
+  width: 100%;
+  aspect-ratio: 1; 
+  background-color: #333;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.novelty-card:hover .novelty-placeholder {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 77, 77, 0.3);
+}
+
+.novelty-card h4 {
+  font-size: 18px;
+  color: #ff4d4d;
+}
+
+/* карточки товаров */
+.hits {
+  padding: 80px 0;
+  background-color: #1a1a1a;
+}
+
+.hits .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 40px; 
+  max-width: 1000px; 
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column; 
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3; 
+  overflow: hidden;
+  background-color: #333; 
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content {
+  padding: 30px 20px; 
+  text-align: center; 
+  flex-grow: 1; 
+}
+
+.card-content h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #ff4d4d;
+}
+
+.card-content p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: auto; 
+}
+
+/* блок доставки */
+.delivery {
+  padding: 60px 0;
+  background-color: #111;
+}
+
+.delivery-content {
+  text-align: center; 
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+              url('https://via.placeholder.com/1200x500/333/fff?text=Фон+Доставки');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 40px;
+  border-radius: 15px;
+  border: 2px solid #333;
+}
+
+.delivery-content p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #ddd;
+}
+
+.delivery-info {
+  background-color: rgba(255, 77, 77, 0.1); 
+  padding: 20px 40px;
+  border-radius: 10px;
+  display: block; 
+  width: fit-content; /* сжимаем блок по ширине текста */
+  margin: 0 auto 30px auto; /* центруем */
+  border: 1px solid #ff4d4d;
+}
+
+.delivery-info p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.btn-order {
+  display: block; 
+  width: fit-content; 
+  margin: 0 auto; 
+}
+
+/* подвал */
+.footer {
+  background-color: #050505;
+  padding: 40px 0;
+  border-top: 1px solid #333;
+}
+
+.footer-content {
+  text-align: center; 
+  color: #888;
+  font-size: 14px;
+}
+
+.footer-details {
+  margin-bottom: 10px;
+}
+
+.footer-details p {
+  color: #bbb;
+  font-size: 15px;
+}
+
+/* сетка для отзывов */
+.reviews-section {
+  background-color: #111;
+  padding: 80px 0;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.review-card {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  border-top: 3px solid #ff4d4d;
+  text-align: left;
+}
+
+.stars {
+  color: #ff4d4d;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.review-card p {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.review-card h4 {
+  color: #fff;
+  font-size: 16px;
+}
+
+/* форма брони */
+.booking-section {
+  background: linear-gradient(rgba(10,10,10,0.9), rgba(10,10,10,0.9)), 
+              url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1920&q=80') center/cover fixed; /* фон стоит на месте при скролле */
+  padding: 100px 0;
+  text-align: center;
+}
+
+.booking-wrapper {
+  max-width: 800px;
+  background-color: rgba(26, 26, 26, 0.8);
+  padding: 50px;
+  border-radius: 15px;
+  border: 1px solid #333;
+  backdrop-filter: blur(10px); /* блюр эффектик */
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.booking-form input,
+.booking-form select {
+  flex: 1;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  border-color: #ff4d4d;
+}
+
+/* красим календарь в белый, а то на черном фоне его не видно */
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+/* подключаю фотки из папки */
+.history-image {
+  background: url('../images/yakitori_exterior.jpg') center/cover;
+}
+
+.healthy-image {
+  background: url('../images/healthy.jpg') center/cover;
+}
+
+/* фотки новинок */
+.novelty-card:nth-child(1) .novelty-placeholder { background: url('../images/trufel.jpg') center/cover; }
+.novelty-card:nth-child(2) .novelty-placeholder { background: url('../images/mango.jpg') center/cover; }
+.novelty-card:nth-child(3) .novelty-placeholder { background: url('../images/volcanomaki.jpg') center/cover; }
+
+/* фотки хитов */
+.card:nth-child(1) .image-placeholder { background: url('../images/fil.jpg') center/cover; }
+.card:nth-child(2) .image-placeholder { background: url('../images/california.jpg') center/cover; }
+.card:nth-child(3) .image-placeholder { background: url('../images/dragon.jpg') center/cover; }
+.card:nth-child(4) .image-placeholder { background: url('../images/unagi-maki.jpg') center/cover; }
+.card:nth-child(5) .image-placeholder { background: url('../images/samuraiset.jpg') center/cover; }
+.card:nth-child(6) .image-placeholder { background: url('../images/ebi-crunch.jpg') center/cover; }
+.card:nth-child(7) .image-placeholder { background: url('../images/syasee.jpg') center/cover; }
+.card:nth-child(8) .image-placeholder { background: url('../images/zapech.jpg') center/cover; }
+
+/* фикс адаптива для мобилок */
+@media (max-width: 768px) {
+  .header { padding: 20px; flex-direction: column; gap: 15px; position: relative; }
+  .nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .nav a { margin: 0; }
+  .sidebar { display: none; }
+  
+  .history-wrapper, .healthy-wrapper, .novelties-wrapper { flex-direction: column; }
+  .novelties-grid { grid-template-columns: 1fr; }
+  .hits .grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  
+  .welcome_div h1 { font-size: 40px; }
+  .form-row { flex-direction: column; }
+}
