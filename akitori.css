@@ -513,27 +513,27 @@ body {
 
 /* подключаю фотки из папки */
 .history-image {
-  background: url('../images/yakitori_exterior.jpg') center/cover;
+  background: url('images/yakitori_exterior.jpg') center/cover;
 }
 
 .healthy-image {
-  background: url('../images/healthy.jpg') center/cover;
+  background: url('images/healthy.jpg') center/cover;
 }
 
 /* фотки новинок */
-.novelty-card:nth-child(1) .novelty-placeholder { background: url('../images/trufel.jpg') center/cover; }
-.novelty-card:nth-child(2) .novelty-placeholder { background: url('../images/mango.jpg') center/cover; }
-.novelty-card:nth-child(3) .novelty-placeholder { background: url('../images/volcanomaki.jpg') center/cover; }
+.novelty-card:nth-child(1) .novelty-placeholder { background: url('images/trufel.jpg') center/cover; }
+.novelty-card:nth-child(2) .novelty-placeholder { background: url('images/mango.jpg') center/cover; }
+.novelty-card:nth-child(3) .novelty-placeholder { background: url('images/volcanomaki.jpg') center/cover; }
 
 /* фотки хитов */
-.card:nth-child(1) .image-placeholder { background: url('../images/fil.jpg') center/cover; }
-.card:nth-child(2) .image-placeholder { background: url('../images/california.jpg') center/cover; }
-.card:nth-child(3) .image-placeholder { background: url('../images/dragon.jpg') center/cover; }
-.card:nth-child(4) .image-placeholder { background: url('../images/unagi-maki.jpg') center/cover; }
-.card:nth-child(5) .image-placeholder { background: url('../images/samuraiset.jpg') center/cover; }
-.card:nth-child(6) .image-placeholder { background: url('../images/ebi-crunch.jpg') center/cover; }
+.card:nth-child(1) .image-placeholder { background: url('images/fil.jpg') center/cover; }
+.card:nth-child(2) .image-placeholder { background: url('images/california.jpg') center/cover; }
+.card:nth-child(3) .image-placeholder { background: url('images/dragon.jpg') center/cover; }
+.card:nth-child(4) .image-placeholder { background: url('images/unagi-maki.jpg') center/cover; }
+.card:nth-child(5) .image-placeholder { background: url('images/samuraiset.jpg') center/cover; }
+.card:nth-child(6) .image-placeholder { background: url('images/ebi-crunch.jpg') center/cover; }
 .card:nth-child(7) .image-placeholder { background: url('images/syasee.jpg') center/cover; }
-.card:nth-child(8) .image-placeholder { background: url('../images/zapech.jpg') center/cover; }
+.card:nth-child(8) .image-placeholder { background: url('images/zapech.jpg') center/cover; }
 
 /* фикс адаптива для мобилок */
 @media (max-width: 768px) {
